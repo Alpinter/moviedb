@@ -1,0 +1,105 @@
+<html><head>
+  <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery-dateFormat.js"></script>
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/ajax.js"></script>
+  <style>
+    .movie { background-color: #e4e4e4; padding: 5px; outline: 2px solid black; }
+    
+    .affix {
+          top: 0;
+            width: 100%;
+      margin-bottom: 0px;
+        z-index: 1;
+      }
+
+      .affix + .container-fluid {
+        padding-top: 70px;
+      }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+<div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Test</a>
+    </div>
+  <ul class="nav navbar-nav">
+    <li><a href="index.html">Forma</a></li>
+    <li class="active"><a href="#">Ajax</a></li>
+  </ul>
+    </nav>
+<div class="container">
+<div class="row">
+    <div class="col-md-12 movie">
+        <div class="col-md-2">
+            <img class="img-thumbnail" src="http://image.tmdb.org/t/p/w185/jIhL6mlT7AblhbHJgEoiBIOUVl1.jpg"></img>
+        </div>
+        <div class="col-md-10">
+            <h1><a class="title" href="http://www.imdb.com/title/tt0944947/">Game of Thrones</a></h1>
+            <p class="text-justify" id="overview">Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond.</p>
+            <span id="first_air_date"> First air date: 2011-04-17 </span> <br/>
+            <span id="created_by">Created by: David Benioff, D. B. Weiss </span> <br/> <!-- Ovo odraditio kao napredno -->
+            
+        </div>
+    </div>
+</div>
+<hr>
+<div class="row">
+<div class="col-md-4 col-md-offset-3">
+  <select class="form-control" id="cbInput"> 
+    <option>Izaberite sezonu</option>
+    <option value="">Game of Thrones - Season 1</option>
+    <option value="">Game of Thrones - Season 2</option>
+    <option value="">ETC...</option>
+  </select>
+</div>
+<div class="col-md-2">
+  <button class="btn btn-default" id="btnImdb">IMDb</button> 
+</div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-md-12 text-center">
+    <h2 class="naslov">Most Popular TV Shows</h2>
+  </div>
+</div>
+<hr>
+<div class="row posters">
+  <br>
+  <div class="row">
+        <div class="col-md-3">
+            <img src="http://image.tmdb.org/t/p/w300/vC324sdfcS313vh9QXwijLIHPJp.jpg" title="Pretty Little Liars" id="31917" class="img-thumbnail">
+        </div>
+        <div class="col-md-3">
+            <img src="http://image.tmdb.org/t/p/w300//esN3gWb1P091xExLddD2nh4zmi3.jpg" title="Mr. Robot" id="62560" class="img-thumbnail">
+        </div>
+        <div class="col-md-3">
+            <img src="http://image.tmdb.org/t/p/w300/i6Iu6pTzfL6iRWhXuYkNs8cPdJF.jpg" title="Suits" id="37680" class="img-thumbnail">
+        </div>
+        <div class="col-md-3">
+            <img src="http://image.tmdb.org/t/p/w300/jIhL6mlT7AblhbHJgEoiBIOUVl1.jpg" title="Game of Thrones" id="1399" class="img-thumbnail">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-3">
+            <img src="http://image.tmdb.org/t/p/w300/vC324sdfcS313vh9QXwijLIHPJp.jpg" title="Pretty Little Liars" id="31917" class="img-thumbnail">
+        </div>
+        <div class="col-md-3">
+            <img src="http://image.tmdb.org/t/p/w300//esN3gWb1P091xExLddD2nh4zmi3.jpg" title="Mr. Robot" id="62560" class="img-thumbnail">
+        </div>
+        <div class="col-md-3">
+            <img src="http://image.tmdb.org/t/p/w300/i6Iu6pTzfL6iRWhXuYkNs8cPdJF.jpg" title="Suits" id="37680" class="img-thumbnail">
+        </div>
+        <div class="col-md-3">
+            <img src="http://image.tmdb.org/t/p/w300/jIhL6mlT7AblhbHJgEoiBIOUVl1.jpg" title="Game of Thrones" id="1399" class="img-thumbnail">
+        </div>
+    </div>
+</div>
+</div>
+
+
+</body>
+</html>

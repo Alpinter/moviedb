@@ -1,0 +1,81 @@
+<html>
+<head>
+	<title>Test</title>
+	<script src="js/jquery-1.11.0.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/skripta.js"></script>
+	<style>
+	  	.affix {
+	      	top: 0;
+	    	  width: 100%;
+	  	}
+
+	  	.affix + .container-fluid {
+	      padding-top: 70px;
+	  	}
+	  	#select_tip {
+	  		background-color: black;
+	  		color: white;
+	  	}
+	</style>
+</head>
+<body>
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+<div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Test</a>
+    </div>
+  <ul class="nav navbar-nav">
+    <li class="active"><a href="#">Forma</a></li>
+    <li><a href="ajax.html">Ajax</a></li>
+  </ul>
+</nav>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4">
+				<form role="form" action="ajax.html" onSubmit="return provera(this);">
+		  			<div class="form-group">
+		    			<label for="usr">Ime:</label>
+		    			<input type="text" name="ime" class="form-control" id="usr">
+		  			</div>
+		  			<div class="form-group">
+		    			<label for="prz">Prezime:</label>
+		    			<input type="text" name="prezime" class="form-control" id="prz">
+		  			</div>
+		  			<div class="form-group">
+		    			<label for="email">Email:</label>
+		    			<input type="email" name="email" class="form-control" id="email">
+		  			</div>
+		  			<div class="form-group">
+		    			<label for="nacin">Nacin placanja:</label>
+		    			<select class = "form-control" name="nacin" onChange="selectChecker(this)">
+		    				<option value="">Izaberite opciju...</option>
+					  		<option value="Kartica">Kartica</option>
+					  		<option value="Gotovina">Gotovina</option>
+						</select>
+		  			</div>
+		  			<div class="form-group">
+		    			<label for="tip">Tip:</label>
+		    			<select class = "form-control" name="tip">
+					  		<option value="Prazno"></option>
+					  		<option value="Visa">Visa</option>
+					  		<option value="Master">Master</option>
+						</select>
+		  			</div>
+		  					  			
+		  			<button type="submit" class="btn btn-default col-md-4 pull-right">Submit</button>
+				</form>
+			</div>
+		</div>
+		<br/>
+		<div class="row">
+			<div class="text-center">
+				<p id="select_tip">
+				    U selectu Tip molimo odaberite : <span></span>
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
